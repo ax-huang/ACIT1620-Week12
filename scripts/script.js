@@ -24,3 +24,13 @@ function changeText(){
 buttonRef.addEventListener("click", alertUser, {once: true})
 buttonRef.addEventListener("click", changeBGPink)
 buttonRef.addEventListener("click", changeText)
+
+function updateImage(){
+    const image = document.querySelector("#shoppingCart")
+    image.setAttribute("src","images/shoppingCart.png")
+    image.setAttribute("alt", "Image of shopping cart")
+    image.setAttribute("height", "75")
+    image.setAttribute("width", "75")
+}
+
+buttonRef.addEventListener("click", updateImage)
