@@ -1,4 +1,4 @@
-// const buttonRef = document.querySelector("button")
+const buttonRef = document.querySelector("button")
 // const bodyRef = document.querySelector("body")
 
 
@@ -50,4 +50,21 @@ function textColorChange(event){
 
 buttonContainerRef.addEventListener("mouseover",bgChange)
 buttonContainerRef.addEventListener("click",textColorChange)
+
+function addNewButtonAndPara(){
+    let newButton = document.createElement("button")
+    let newPara = document.createElement("p")
+
+    newButton.innerText = "Purple"
+    newPara.innerText = "some text"
+
+    document.body.appendChild(newButton)
+    document.body.appendChild(newPara)
+
+    newButton.addEventListener("mouseover", bgChange)
+    newButton.addEventListener("click", textColorChange)
+
+}
+
+buttonRef.addEventListener("click", addNewButtonAndPara)
 
