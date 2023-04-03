@@ -37,9 +37,17 @@
 
 const buttonContainerRef = document.querySelector(".button-container")
 function bgChange(event){
-    if (event.target.tagName === "BUTTON"){
+    if (event.target.tagName === "BUTTON"){ //Make it only change background colour for button
         event.target.classList.add("greenBG")
     }
 
 }
+
+function textColorChange(event){
+    let colorValue = event.target.textContent
+    event.target.style.color = colorValue
+}
+
 buttonContainerRef.addEventListener("mouseover",bgChange)
+buttonContainerRef.addEventListener("click",textColorChange)
+
